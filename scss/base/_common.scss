@@ -1,0 +1,129 @@
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -15px;
+
+  .grid-item {
+    width: 33.33%;
+    padding: 0 15px;
+  }
+}
+
+.visual-item {
+  display: flex;
+  align-items: center;
+
+  .left{
+    width: 50%;
+    align-items: center;
+
+  }
+
+  .right{
+    width: 50%;
+  }
+}
+//section - title - white
+
+.section-title-white {
+  margin-bottom: 30px;
+  text-align: center;
+
+  h2 {
+    font-size: 32px;
+    color: $text-white;
+    margin-bottom: 15px;
+    font-weight: 500;
+  }
+
+  p {
+    font-size: 18px;
+    color: $text-white;
+    line-height: 1.5;
+    font-weight: 300;
+  }
+}
+
+
+//section - title - grey
+
+.section-title-grey {
+  margin-bottom: 30px;
+  text-align: center;
+
+  h2 {
+    font-size: 32px;
+    color: $text-black-grey-title;
+    margin-bottom: 15px;
+    font-weight: 500;
+  }
+
+  p {
+    font-size: 18px;
+    color: $text-black-grey-sub;
+    line-height: 1.5;
+  }
+}
+
+//section - title - black
+
+.section-title-black{
+  margin-bottom: 30px;
+  text-align: center;
+
+  h2 {
+    font-size: 32px;
+    color: $text-dark;
+    margin-bottom: 15px;
+    font-weight: 500;
+  }
+
+  p {
+    font-size: 18px;
+    color: $text-grey;
+    line-height: 1.5;
+  }
+}
+
+
+// img hover
+
+.item-img {
+  position: relative;
+  cursor: pointer;
+  .image {
+    display: block;
+  }
+
+  .darkness {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: rgba(0,0,0,0.6);
+    i{
+      color: #fff;
+      font-size: 32px;
+    }
+  }
+
+  &:hover .darkness{
+    opacity: 1;
+  }
+
+}

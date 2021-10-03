@@ -1,0 +1,111 @@
+.app-header {
+  .top-header {
+    background-color: #343434;
+
+    .container {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .sns {
+
+      display: flex;
+
+      a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 40px;
+        height: 40px;
+        border-right: 1px solid #666;
+        transition: background-color 0.3s;
+        color: #fff;
+
+        &:hover {
+          &.twitter {
+            background-color: #2c9ed4;
+          }
+
+          &.pinterest {
+            background-color: #cd2126;
+          }
+
+          &.facebook {
+            background-color: #2d2ecc;
+          }
+
+          &.instagram {
+            background-color: #c526d0;
+          }
+
+          &.skype {
+            background-color: #3bbbc7;
+          }
+        }
+      }
+
+    }
+
+    .contact {
+      display: flex;
+      align-items: center;
+
+      .info {
+        display: flex;
+        align-items: center;
+        font-size: 14px;
+        color: #dedede;
+        margin-left: 30px;
+
+        i {
+          font-size: 18px;
+          margin-right: 4px;
+        }
+      }
+    }
+  }
+
+  .main-header {
+
+    .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      img {
+        width: 172px;
+      }
+    }
+
+    nav {
+      > ul {
+        display: flex;
+
+        .nav-link {
+          display: flex;
+          align-items: center;
+          height: 87px;
+          padding: 0 10px;
+          margin: 0 5px;
+
+          text-transform: capitalize;
+          color: #333;
+          font-weight: 500;
+
+          transition: color 0.3s;
+
+          &:hover {
+            color: #3498db;
+          }
+
+          i {
+            margin-left: 4px;
+          }
+        }
+      }
+    }
+
+  }
+}
