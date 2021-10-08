@@ -1,6 +1,10 @@
 .app-header {
   .top-header {
     background-color: #343434;
+    @include screen-md{
+      display: none;
+    }
+
 
     .container {
       display: flex;
@@ -80,8 +84,22 @@
     }
 
     nav {
+
+
+      @include screen-md{
+        display: flex;
+        align-items: center;
+        height: 87px;
+      }
+
+
       > ul {
         display: flex;
+
+        @include screen-md{
+          display: none;
+        }
+
 
         .nav-link {
           display: flex;

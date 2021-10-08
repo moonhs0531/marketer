@@ -14,6 +14,14 @@
 
       .left-visual {
 
+        width: 50%;
+
+        @include screen-md {
+          text-align: center;
+          width: 100%;
+          padding: 34px;
+        }
+
         h2 {
           font-size: 38px;
           padding-bottom: 10px;
@@ -41,6 +49,13 @@
             border-color: rgb(104, 104, 104);
             background-color: rgb(104, 104, 104);
           }
+        }
+      }
+
+      .right {
+        width: 50%;
+        @include screen-md {
+          display: none;
         }
       }
     }
@@ -108,6 +123,10 @@
     .item {
       text-align: center;
 
+      @include screen-md {
+        margin-top: 20px;
+      }
+
       img {
         border-radius: 50%;
         width: 120px;
@@ -138,13 +157,26 @@
   align-items: center;
   height: 508px;
 
+  @include screen-sm {
+    margin-top: 40px;
+  }
+
+
   .video-contents {
     display: flex;
     align-items: center;
 
+    @include screen-sm {
+      flex-direction: column;
+    }
+
 
     .video-left {
       width: 50%;
+
+      @include screen-sm {
+        width: 100%;
+      }
 
       .video-wrapper {
         max-width: 100%;
@@ -167,12 +199,17 @@
     }
 
     .video-right {
-      padding: 0 15px;
       width: 50%;
+
+      @include screen-sm {
+        width: 100%;
+        margin-top: 16px;
+      }
 
       .video-explain {
 
         padding: 0 15px;
+
 
         .right-heading {
           padding: 14px 20px;
@@ -222,12 +259,26 @@
   background-color: #393f43;
   padding: 90px 0 50px;
 
+  @include screen-sm {
+    margin: 90px 0 0 0;
+  }
+
   .contents {
     ul {
       margin: 30px 0;
 
       .item {
         text-align: center;
+
+        @include screen-md {
+          margin-top: 16px;
+        }
+
+
+        //img와 desc부분이 같이 줄어 들었음 좋겠다.
+        img {
+          width: 100%;
+        }
 
         .desc {
           display: flex;
@@ -238,6 +289,7 @@
           background-color: $bg-white;
           border-radius: 0 0 4px 4px;
           border-bottom: 3px solid #ccc;
+
 
           h3 {
             font-size: 18px;
@@ -378,13 +430,31 @@
 
   .talk-container {
     display: flex;
+    @include screen-md {
+    }
+
+    @include screen-sm {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
 
     .talk {
-      padding: 10px 30px;
+      width: 33.3%;
+      margin: 0 16px;
+
+      //여기 부분 width:50%가 안됨
+
+      @include screen-md {
+        width: 50%;
+      }
+
+      @include screen-sm {
+        width: 100%;
+      }
 
       .talk-text {
         position: relative;
-        width: 370px;
         background-color: $bg-white;
         border-radius: 4px;
         padding: 30px;
@@ -450,6 +520,10 @@
     padding: 35px 0;
 
     .grid-item {
+
+      @include screen-md {
+        margin-top: 16px;
+      }
 
       .desc {
         border-radius: 0 0 4px 4px;
@@ -617,8 +691,20 @@
     align-items: center;
     justify-content: center;
 
+    @include screen-md {
+      width: 50%;
+    }
+
+    @include screen-sm {
+      width: 100%;
+    }
+
     .item {
       padding: 60px 0;
+
+      @include screen-md {
+        padding: 0;
+      }
 
       .item-user {
         width: 180px;
@@ -660,17 +746,31 @@
     display: flex;
     justify-content: center;
     align-items: center;
+
+    @include screen-sm {
+      flex-direction: column;
+      text-align: center;
+    }
   }
 
   .left-icon {
     width: 30%;
     border-right: 1px solid #eee;
+
+    @include screen-sm {
+      width: 100%;
+      border: none;
+    }
   }
 
   .sending-email {
     width: 70%;
     padding-left: 60px;
     color: $text-white;
+
+    @include screen-sm {
+      padding-left: 0;
+    }
 
     h3 {
       font-size: 28px;
@@ -736,8 +836,21 @@ footer {
     .grid {
       padding: 60px 0;
 
+      @include screen-md {
+        padding: 30px 0;
+      }
+
       .grid-item {
         width: 25%;
+
+        @include screen-md {
+          width: 50%;
+          margin-top: 32px;
+        }
+
+        @include screen-sm {
+          width: 100%;
+        }
 
         h4 {
           font-size: 16px;
@@ -860,9 +973,23 @@ footer {
     font-weight: 300;
     font-size: 14px;
 
+    @include screen-sm {
+      flex-direction: column;
+      justify-content: center;
+    }
+
     .copyrighter {
       display: flex;
       width: 33.3%;
+
+      @include screen-md {
+        width: 50%;
+      }
+
+      @include screen-sm {
+        width: 100%;
+        justify-content: center;
+      }
 
       a {
         margin-left: 4px;
@@ -875,6 +1002,10 @@ footer {
       display: flex;
       justify-content: center;
       width: 33.3%;
+
+      @include screen-md {
+        display: none;
+      }
 
       i {
         border: 1px solid #afafaf;
@@ -892,6 +1023,16 @@ footer {
       justify-content: end;
       width: 33.3%;
       transition: color 0.4s;
+
+      @include screen-md {
+        width: 50%;
+      }
+
+      @include screen-sm {
+        width: 100%;
+        justify-content: center;
+        margin-top: 16px;
+      }
 
       p {
         padding-bottom: 4px;
